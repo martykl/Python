@@ -1,20 +1,18 @@
-# Python program to display all the prime numbers within an interval
-
-# change the values of lower and upper for a different result
-lower = 1
-upper = 1000
+# Python program to display all the prime numbers inside an interval specified by the user
 
 # uncomment the following lines to take input from the user
-#lower = int(input("Enter lower range: "))
-#upper = int(input("Enter upper range: "))
+bot = int(input("Enter bottom of range: "))
+top = int(input("Enter top of range: "))
 
-print("Prime numbers between",lower,"and",upper,"are:")
+print("Prime numbers between the values",bot,"and",top,"are as listed:")
 
-for num in range(lower,upper + 1):
-   # prime numbers are greater than 1
-   if num > 1:
-       for i in range(2,num):
-           if (num % i) == 0:
+for number in range(bot,top + 1):
+   if number > 1:
+       for test in range(2,num):
+           #test if each number in the range is divisible by the test digit
+           if (number % test) == 0:
                break
+               #breaks once it finds a number divisible by any digit between 2 and the number being tested
        else:
-           print(num)
+         #prints the number if it is prime
+           print(number)
